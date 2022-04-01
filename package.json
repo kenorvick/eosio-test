@@ -9,16 +9,26 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@greymass/buoy": "^1.0.1",
+    "@greymass/eosio": "^0.5.4",
+    "axios": "^0.26.1",
+    "buffer": "^6.0.3",
+    "eosio-signing-request": "^2.4.0",
+    "eosjs": "^22.1.0",
     "expo": "~44.0.2",
+    "expo-secure-store": "^11.1.1",
     "expo-splash-screen": "~0.14.1",
     "expo-status-bar": "~1.2.0",
+    "lodash": "^4.17.21",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-native": "0.64.3",
-    "react-native-web": "0.17.1"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.12.9"
+    "react-native-camera": "^4.2.1",
+    "react-native-permissions": "^3.3.1",
+    "react-native-qrcode-scanner": "^1.5.5",
+    "react-native-web": "0.17.1",
+    "react-zlib-js": "^1.0.5",
+    "text-encoding": "^0.7.0"
   },
   "private": true
 }

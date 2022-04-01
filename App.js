@@ -1,21 +1,38 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useEffect } from "react";
+import { StyleSheet } from "react-native";
+import QRCodeScanner from "react-native-qrcode-scanner";
+import Client from "./utils/Client";
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+  useEffect(() => {
+    (async () => {
+      await Client.initialize();
+    })();
+  }, []);
+
+  const onSuccess = (e) => {
+    Client.handleIdentityRequest(e.data);
+  };
+
+  return <QRCodeScanner onRead={onSuccess} />;
 }
 
 const styles = StyleSheet.create({
-  container: {
+  centerText: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    fontSize: 18,
+    padding: 32,
+    color: "#777",
+  },
+  textBold: {
+    fontWeight: "500",
+    color: "#000",
+  },
+  buttonText: {
+    fontSize: 21,
+    color: "rgb(0,122,255)",
+  },
+  buttonTouchable: {
+    padding: 16,
   },
 });
