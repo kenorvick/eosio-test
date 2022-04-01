@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "eosio-test",
+    "slug": "eosio-test",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "eosio-test"
+}
